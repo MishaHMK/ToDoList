@@ -1,0 +1,13 @@
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.csproj.AssemblyReference.cache
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.AssemblyInfoInputs.cache
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.AssemblyInfo.cs
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.csproj.CoreCompileInputs.cache
+D:\Study\Курси\ToDoProject\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.deps.json
+D:\Study\Курси\ToDoProject\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.dll
+D:\Study\Курси\ToDoProject\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.pdb
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.dll
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.pdb
+D:\Study\Курси\ToDoProject\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.runtimeconfig.json
+D:\Study\Курси\ToDoProject\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.runtimeconfig.dev.json
+D:\Study\Курси\ToDoProject\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.genruntimeconfig.cache
