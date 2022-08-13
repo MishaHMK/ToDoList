@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore.Query;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ToDo.DAL.Entities;
 
@@ -17,5 +18,9 @@ namespace ToDo.BLL.Interfaces
         Task DeleteBoardById(int id);
 
         List<Objective> GetAllBoardObjectives(int id);
+
+        List<Board> GetBoardsWithObjectives();
+
+        //List<Board> GetBoardsWithObjectives(int id);
     }
 }

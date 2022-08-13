@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ToDoWebApi.Migrations
+namespace ToDo.DAL.Migrations
 {
     public partial class DbSetUp : Migration
     {
@@ -12,7 +12,7 @@ namespace ToDoWebApi.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(nullable: true)
+                    Title = table.Column<string>(maxLength: 30, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -25,10 +25,10 @@ namespace ToDoWebApi.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(nullable: true),
-                    TaskDescription = table.Column<string>(nullable: true),
+                    Title = table.Column<string>(maxLength: 30, nullable: false),
+                    TaskDescription = table.Column<string>(maxLength: 100, nullable: true),
                     Completed = table.Column<bool>(nullable: false),
-                    BoardId = table.Column<int>(nullable: true)
+                    BoardId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,7 +38,7 @@ namespace ToDoWebApi.Migrations
                         column: x => x.BoardId,
                         principalTable: "Boards",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

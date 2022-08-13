@@ -1,0 +1,110 @@
+@import '~antd/dist/antd.css';
+
+   .App {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  .create {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .todoList{
+    flex: 75%;
+    background-color: rgb(233, 233, 233);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    flex-direction: column;
+  }
+  
+  .obj {
+    width: 500px;
+    height: 50px;
+    display: flex;
+    color: black;
+    margin: 15px;
+  }
+
+  .obj .content {
+    flex: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .obj .content span{
+    display: grid;
+    place-items: center;
+    border: 1px solid rgb(153, 180, 193);
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    border-right: none;
+    background-color: rgb(168, 221, 234);
+    font-family: Georgia;
+  }
+
+
+  .button-add{
+    background-color: rgb(68, 217, 80);
+  }
+  
+  .obj button{
+    flex: 20%;
+    height: 100%;
+    font-family: Georgia;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+  }
+  
+  .button-del{
+    background-color: rgb(217, 68, 68);
+  }
+  
+  .inputContainer button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    font-family: Georgia;
+  }
+
+  .todoTitle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

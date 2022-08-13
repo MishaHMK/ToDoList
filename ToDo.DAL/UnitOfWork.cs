@@ -8,7 +8,7 @@ using ToDo.DAL.Repositories;
 
 namespace ToDo.DAL
 {
-    public class UnitOfWork: IUnitOfWork, IDisposable
+    public class UnitOfWork: IUnitOfWork
     {
         private readonly ToDoListContext _context;
 
@@ -28,11 +28,6 @@ namespace ToDo.DAL
         public async Task CompleteAsync()
         {
             await _context.SaveChangesAsync();
-        }
-
-        public void Dispose()
-        {
-            _context.Dispose();
         }
 
         public async Task Save()

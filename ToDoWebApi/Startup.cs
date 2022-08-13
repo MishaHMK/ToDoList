@@ -64,11 +64,11 @@ namespace ToDoWebApi
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
 
-            services.AddControllers().AddNewtonsoftJson(
-                      options =>
-                      {
-                          options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-                      });
+            services.AddControllersWithViews()
+                    .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ReferenceLoopHandling
+                    = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

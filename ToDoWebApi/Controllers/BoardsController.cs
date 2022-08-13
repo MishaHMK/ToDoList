@@ -29,9 +29,9 @@ namespace ToDoWebApi.Controllers
             public async Task<ActionResult<IEnumerable<Board>>> GetBoards()
             {
                 var boards = await _brdService.GetAllBoardsAsync();
-                var boardDTOs = _mapper.Map<List<BoardDTO>>(boards);
+                //var boardDTOs = _mapper.Map<List<BoardDTO>>(boards);
 
-                return Ok(boardDTOs);
+                return Ok(boards);
             }
 
             // GET: api/Boards/1
@@ -60,9 +60,19 @@ namespace ToDoWebApi.Controllers
                  return objectiveDTOs;
             }
 
+          // GET: api/Boards/boards
+          [HttpGet("brd")]
+            public IEnumerable<Board> GetAllBoardsWithObjectives()
+            {
+                var boards = _brdService.GetBoardsWithObjectives();
 
-            // POST: api/Boards
-            [HttpPost]
+                return boards;
+            }
+
+
+
+        // POST: api/Boards
+        [HttpPost]
             public async Task<ActionResult<Board>> PostBoard(BoardDTO boardDTO)
             {
                 if (!ModelState.IsValid)
@@ -73,7 +83,7 @@ namespace ToDoWebApi.Controllers
                 var board = _mapper.Map<Board>(boardDTO);
                 await _brdService.CreateBoard(board);
 
-                return CreatedAtAction("PostBoard", new { id = boardDTO.Id }, boardDTO);
+                return CreatedAtAction("PostBoard", new { id = board.Id }, board);
             }
 
     
@@ -99,11 +109,7 @@ namespace ToDoWebApi.Controllers
                     return NotFound($"Board with Id = {id} not found");
                 }
 
-                //var board = _mapper.Map(boardDTO, boardToUpdate);
-
-                //await _brdService.UpdateBoard(board);
-
-                boardToUpdate.Title = boardDTO.Title;
+                boardToUpdate = _mapper.Map(boardDTO, boardToUpdate);
 
                 await _brdService.UpdateBoard(boardToUpdate);
 
@@ -116,7 +122,7 @@ namespace ToDoWebApi.Controllers
              {
                   await _brdService.DeleteBoardById(id);
                   return Ok();
-        }
+             }
 
     }
 }

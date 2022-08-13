@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore.Query;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ToDo.BLL.Interfaces;
 using ToDo.DAL.Entities;
@@ -47,6 +48,11 @@ namespace ToDo.BLL.Services
         public  List<Objective> GetAllBoardObjectives(int id)
         {
             return _unitOfWork.Boards.GetObjectives(id);
+        }
+
+        public List<Board> GetBoardsWithObjectives()
+        {
+            return _unitOfWork.Boards.GetBoardsWithObjectives();
         }
     }
 }

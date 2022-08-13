@@ -5,7 +5,8 @@ namespace ToDo.DAL.Entities
 {
     public class Board
     {
-        public int Id { get; set; }
+        [Key]
+        public int Id { get;  }
 
         [Required]
         [MaxLength(30)]

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDo.DAL;
 
-namespace ToDoWebApi.Migrations
+namespace ToDo.DAL.Migrations
 {
     [DbContext(typeof(ToDoListContext))]
     partial class ToDoListContextModelSnapshot : ModelSnapshot

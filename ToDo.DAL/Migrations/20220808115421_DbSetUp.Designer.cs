@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDo.DAL;
 
-namespace ToDoWebApi.Migrations
+namespace ToDo.DAL.Migrations
 {
     [DbContext(typeof(ToDoListContext))]
-    [Migration("20220804083728_EntityUpdate")]
-    partial class EntityUpdate
+    [Migration("20220808115421_DbSetUp")]
+    partial class DbSetUp
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace ToDoWebApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ToDoWebApi.Entities.Board", b =>
+            modelBuilder.Entity("ToDo.DAL.Entities.Board", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -28,14 +28,16 @@ namespace ToDoWebApi.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.HasKey("Id");
 
                     b.ToTable("Boards");
                 });
 
-            modelBuilder.Entity("ToDoWebApi.Entities.Objective", b =>
+            modelBuilder.Entity("ToDo.DAL.Entities.Objective", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -49,10 +51,13 @@ namespace ToDoWebApi.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("TaskDescription")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
 
                     b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.HasKey("Id");
 
@@ -61,9 +66,9 @@ namespace ToDoWebApi.Migrations
                     b.ToTable("Objectives");
                 });
 
-            modelBuilder.Entity("ToDoWebApi.Entities.Objective", b =>
+            modelBuilder.Entity("ToDo.DAL.Entities.Objective", b =>
                 {
-                    b.HasOne("ToDoWebApi.Entities.Board", "Board")
+                    b.HasOne("ToDo.DAL.Entities.Board", "Board")
                         .WithMany("Tasks")
                         .HasForeignKey("BoardId")
                         .OnDelete(DeleteBehavior.Cascade)

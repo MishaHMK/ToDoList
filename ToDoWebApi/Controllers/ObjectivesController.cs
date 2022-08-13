@@ -61,7 +61,7 @@ namespace ToDoWebApi.Controllers
             var objective = _mapper.Map<Objective>(objectiveDTO);
             await _objService.CreateObjective(objective);
 
-            return CreatedAtAction("PostObjective", new { id = objectiveDTO.Id }, objectiveDTO);
+            return CreatedAtAction("PostObjective", new { id = objective.Id }, objective);
 
         }
 
@@ -85,12 +85,7 @@ namespace ToDoWebApi.Controllers
             {
                 return NotFound($"Objective with Id = {id} not found");
             }
-
-            //var board = _mapper.Map(boardDTO, boardToUpdate);
-
-            //await _brdService.UpdateBoard(board);
-
-            objectiveToUpdate.Title = objectiveDTO.Title;
+            objectiveToUpdate = _mapper.Map(objectiveDTO, objectiveToUpdate);
 
             await _objService.UpdateObjective(objectiveToUpdate);
 

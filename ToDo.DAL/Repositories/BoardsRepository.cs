@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using ToDo.DAL.Entities;
 using ToDo.DAL.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace ToDo.DAL.Repositories
 {
@@ -52,6 +53,12 @@ namespace ToDo.DAL.Repositories
 
             var objectives = _context.Objectives.Where(o => o.BoardId == boardId).ToList();
             return objectives;
+        }
+
+        public List<Board> GetBoardsWithObjectives()
+        {
+            var boards = _context.Boards.Include(o => o.Tasks).ToList();
+            return boards;
         }
     }
 }

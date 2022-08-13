@@ -19,5 +19,14 @@ namespace ToDo.DAL
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-M78QGAQ;Initial Catalog=ToDoListDB;Integrated Security=True");
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Board>().HasKey(board => board.Id);
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Objective>().HasKey(obj => obj.Id);
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

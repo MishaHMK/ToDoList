@@ -1,10 +1,12 @@
 ﻿
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ToDo.DAL.Entities
 {
     public class Objective
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -13,7 +15,8 @@ namespace ToDo.DAL.Entities
 
         [MaxLength(100)]
         public string TaskDescription { get; set; }
-        [Required]
+
+        [DefaultValue("false")]
         public bool Completed { get; set; }
 
         public int BoardId { get; set; }
