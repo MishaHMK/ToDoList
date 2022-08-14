@@ -33,7 +33,8 @@ export default function Board ({brd})  {
     console.log(values);
     const boardToUpdate : IBoard = 
       { id: brd.id, 
-        title: values.title
+        title: values.title,
+        tasks: brd.tasks
       };
     actions.updateBoard(brd.id, boardToUpdate);
  }
@@ -50,8 +51,10 @@ export default function Board ({brd})  {
              <List.Item>
                 <Card title={brd.title}>
                   <List>
-                  
-                 </List> 
+                  {brd.tasks.map((obj: IObjective, key: number) => (
+                     <p key={key}>{obj.title}</p>
+                    ))} 
+                  </List>
                 <button onClick={() => objectivePage(brd.id)}> tasks</button>
                 <button onClick={showModal}> edit</button>
                 <button className="button-del" onClick={() => {deleteBoard(brd.id)}}>delete</button>

@@ -27,20 +27,17 @@ namespace ToDo.DAL.Repositories
         public override async Task Create(Objective objective)
         {
             await dbSet.AddAsync(objective);
-            //await SaveAsync();
         }
 
         public override async Task Update(Objective objective)
         {
             _context.Entry(objective).State = EntityState.Modified;
-            //await SaveAsync();
         }
 
         public override async Task Delete(int objectId)
         {
             Objective objective = await dbSet.FindAsync(objectId);
             dbSet.Remove(objective);
-            //await SaveAsync();
         }
     }
 }

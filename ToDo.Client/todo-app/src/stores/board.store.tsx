@@ -3,17 +3,17 @@ import { AppService } from '../services/app.service';
 import { IBoard } from '../interfaces/IBoard';
 import axios from "axios";
 
-type State = { boards: any, boardTitle: any, objs: any, IsShown: any, currentId: any, currentTitle: any};
+type State = { boards: any, objs: any, IsShown: any, currentId: any, currentTitle: any};
 type Actions = typeof actions;
 
 
 const initialState: State = {
   boards: [],
-  boardTitle: ' ',
   objs: [],
   IsShown: false,
   currentId: 1,
   currentTitle: ' '
+
 };
 
 const actions = {
@@ -29,7 +29,7 @@ const actions = {
     async ({ setState}) => {
         const brd = await axios.get("https://localhost:44342/api/boards/" + id);
         setState({
-          boardTitle: brd.data.title
+          currentTitle: brd.data.title
         });
     },
 
@@ -44,6 +44,7 @@ const actions = {
     createNewBoard: (boardToCreate: IBoard) : Action<State> => 
     async ({ setState, getState }) => {
         const {data: newBoard} = await axios.post("https://localhost:44342/api/boards", boardToCreate);
+        newBoard.tasks = [];
         setState({
           boards: [...getState().boards, newBoard]
         });

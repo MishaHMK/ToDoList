@@ -13,8 +13,6 @@ const App: FC = () => {
           <BrowserRouter>
                   <Routes>
                       <Route path="/" element={<BoardList/>} />
-                  </Routes>
-                  <Routes>
                       <Route path="items/:id" element={<ObjectiveList/>} />
                   </Routes>
           </BrowserRouter>

@@ -2,6 +2,7 @@ import React, {ChangeEvent, FC, useState, useEffect} from 'react';
 import { IBoard } from '../../interfaces/IBoard';
 import { Button, Input} from 'antd';
 import { useBoardStore } from '../../stores/board.store';
+import { brotliDecompress } from 'zlib';
 
 export const BoardCreate: React.FC = () => {
 
