@@ -3,7 +3,8 @@ import { AppService } from '../services/app.service';
 import { IObjective } from '../interfaces/IObjective';
 import axios from "axios";
 
-type State = { objectives: any, IsShown: any, currentId: any, currentTitle: any, currentDescription: any };
+type State = { objectives: any, IsShown: any, currentId: any, currentTitle: any,
+              currentDescription: any, currentCompletion: any, currentBoardId: any};
 type Actions = typeof actions;
 
 
@@ -13,12 +14,15 @@ const initialState: State = {
   currentId: 1,
   currentTitle: ' ',
   currentDescription: ' ',
+  currentCompletion: false,
+  currentBoardId: 1
 };
 
 const actions = {
   getAllObjectives: (): Action<State> =>
     async ({ setState }) => {
       const objs = await axios.get("https://localhost:44342/api/objectives");
+
       setState({
         objectives: objs.data
       });
@@ -26,9 +30,13 @@ const actions = {
 
   getObjectiveById: (id: any): Action<State> =>
     async ({ setState }) => {
-      const objs = await axios.get("https://localhost:44342/api/objectives/" + id);
+      const obj = await axios.get("https://localhost:44342/api/objectives/" + id);
       setState({
-        objectives: objs.data
+        currentId: obj.data.id,
+        currentTitle: obj.data.title,
+        currentDescription: obj.data.taskDescription,
+        currentCompletion: obj.data.completed,
+        currentBoardId: obj.data.boardId
       });
     },
 
@@ -79,19 +87,18 @@ const actions = {
     const obj = await axios.get("https://localhost:44342/api/objectives/" + id);
     setState({
       IsShown: currentVisibility,
-      currentId: id,
+      currentId: obj.data.id,
       currentTitle: obj.data.title,
-      currentDescription: obj.data.taskDescription
+      currentDescription: obj.data.taskDescription,
+      currentCompletion: obj.data.completed,
+      currentBoardId: obj.data.boardId
     });
   },
 
   makeModalInvisible: (): Action<State> => async ({ setState }) => {
     const currentVisibility = false;
     setState({
-      IsShown: currentVisibility,
-      currentId: 1,
-      currentTitle: ' ',
-      currentDescription: ' '
+      IsShown: currentVisibility
     });
   }
 

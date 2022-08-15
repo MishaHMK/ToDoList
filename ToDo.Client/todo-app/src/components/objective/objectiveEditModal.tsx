@@ -1,29 +1,30 @@
-import React, {ChangeEvent, FC, useState, useEffect} from 'react';
+import React, {ChangeEvent, FC, useState, useEffect, RefObject} from 'react';
 import { IObjective } from '../../interfaces/IObjective';
 import { useObjectiveStore } from '../../stores/objective.store';
 import {Modal, Button, Form, Input} from 'antd';
 
-interface Props {
-    isShown: boolean;
-}
 
-export const ObjectiveEditModal: React.FC<Props> = () => {
+export const ObjectiveEditModal: React.FC = () => {
 
     const [state, actions] = useObjectiveStore();
-    const [visible, setVisible] = useState(false);
 
     const hideModal = () => {
       actions.makeModalInvisible();
     };
 
+    useEffect(() => {
+      actions.getBoardObjectives(state.currentId);
+    }, []);
+
     const onFinish = (values) => {
       console.log(values);
+
       const objectiveToUpdate : IObjective = 
       { id: state.currentId, 
         title: values.title, 
         taskDescription: values.description, 
-        completed: false, 
-        boardId: 1
+        completed: state.currentCompletion, 
+        boardId: state.currentBoardId
       };
       
       actions.updateObjective(state.currentId, objectiveToUpdate);
@@ -42,27 +43,29 @@ export const ObjectiveEditModal: React.FC<Props> = () => {
               initialValues={{
                 title: state.currentTitle,
                 description: state.currentDescription
-              }}>
+              }}> 
               <Form.Item
               name="title"
               label="Title"
               rules={[
                 {
                   required: true,
+                  max: 30
                 },
               ]}>
-              <Input />
+              <Input defaultValue = {state.currentTitle}/>
              </Form.Item>
 
-              <Form.Item
+              <Form.Item 
               name="description"
               label="Description"
               rules={[
                 {
                   required: true,
+                  max: 50
                 },
               ]}>
-              <Input />
+              <Input defaultValue = {state.currentDescription} />
              </Form.Item>
 
              <Form.Item >

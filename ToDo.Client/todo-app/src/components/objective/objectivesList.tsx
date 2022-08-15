@@ -34,7 +34,7 @@ export default function  ObjectiveList () {
             <Objective key = {key} obj={obj}/>
         ))}
     </ul>
-     <ObjectiveEditModal isShown = {obj_state.IsShown}/>
+     <ObjectiveEditModal/>
     </div>
     );
 };

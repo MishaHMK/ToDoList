@@ -17,9 +17,9 @@ namespace ToDo.BLL.Interfaces
 
         Task DeleteBoardById(int id);
 
-        List<Objective> GetAllBoardObjectives(int id);
+        ICollection<Objective> GetAllBoardObjectives(int id);
 
-        List<Board> GetBoardsWithObjectives();
+        ICollection<Board> GetBoardsWithObjectives();
 
         //List<Board> GetBoardsWithObjectives(int id);
     }

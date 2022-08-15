@@ -16,7 +16,7 @@ namespace ToDo.DAL.Repositories
 
         public override async Task<ICollection<Objective>> GetAll()
         {
-            return await dbSet.ToListAsync();
+            return await dbSet.OrderBy(p => p.Completed).ToListAsync();
         }
 
         public override async Task<Objective> GetById(int id)

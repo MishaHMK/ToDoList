@@ -45,12 +45,12 @@ namespace ToDo.BLL.Services
             await _unitOfWork.Save();
         }
 
-        public  List<Objective> GetAllBoardObjectives(int id)
+        public ICollection<Objective> GetAllBoardObjectives(int id)
         {
             return _unitOfWork.Boards.GetObjectives(id);
         }
 
-        public List<Board> GetBoardsWithObjectives()
+        public ICollection<Board> GetBoardsWithObjectives()
         {
             return _unitOfWork.Boards.GetBoardsWithObjectives();
         }

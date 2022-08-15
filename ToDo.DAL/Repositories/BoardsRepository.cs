@@ -27,31 +27,23 @@ namespace ToDo.DAL.Repositories
         public override async Task Create(Board board)
         {
             await dbSet.AddAsync(board);
-            //await SaveAsync();
         }
 
         public override async Task Update(Board board)
         {
             _context.Entry(board).State = EntityState.Modified;
-            //await SaveAsync();
         }
-
-        //public async Task SaveAsync()
-        //{
-        //    await _context.SaveChangesAsync();
-        //}
 
         public override async Task Delete(int boardId)
         {
             Board board = await dbSet.FindAsync(boardId);
             dbSet.Remove(board);
-            //await SaveAsync();
         }
 
         public List<Objective> GetObjectives(int boardId)
         {
 
-            var objectives = _context.Objectives.Where(o => o.BoardId == boardId).ToList();
+            var objectives = _context.Objectives.Where(o => o.BoardId == boardId).OrderBy(c => c.Completed).ToList();
             return objectives;
         }
 

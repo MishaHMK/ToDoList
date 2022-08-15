@@ -26,7 +26,7 @@ namespace ToDoWebApi.Controllers
 
             // GET: api/Boards
             [HttpGet]
-            public async Task<ActionResult<IEnumerable<Board>>> GetBoards()
+            public async Task<ActionResult> GetBoards()
             {
                 var boards = await _brdService.GetAllBoardsAsync();
                 //var boardDTOs = _mapper.Map<List<BoardDTO>>(boards);
@@ -36,7 +36,7 @@ namespace ToDoWebApi.Controllers
 
             // GET: api/Boards/1
             [HttpGet("{id}")]
-            public async Task<ActionResult<Board>> GetBoard(int id)
+            public async Task<ActionResult> GetBoard(int id)
             {
                 var board = await _brdService.GetBoardByIdAsync(id);
 
@@ -51,29 +51,29 @@ namespace ToDoWebApi.Controllers
 
             // GET: api/Boards/obj/1
             [HttpGet("obj/{id}")]
-            public IEnumerable<ObjectiveDTO> GetAllBoardObjectivesById(int id)
+            public ActionResult GetAllBoardObjectivesById(int id)
             {
                  var objectives = _brdService.GetAllBoardObjectives(id);
 
                  var objectiveDTOs = _mapper.Map<List<ObjectiveDTO>>(objectives);
 
-                 return objectiveDTOs;
+                 return Ok(objectiveDTOs);
             }
 
           // GET: api/Boards/boards
           [HttpGet("brd")]
-            public IEnumerable<Board> GetAllBoardsWithObjectives()
+            public ActionResult GetAllBoardsWithObjectives()
             {
                 var boards = _brdService.GetBoardsWithObjectives();
 
-                return boards;
+                return Ok(boards);
             }
 
 
 
         // POST: api/Boards
         [HttpPost]
-            public async Task<ActionResult<Board>> PostBoard(BoardDTO boardDTO)
+            public async Task<ActionResult> PostBoard(BoardDTO boardDTO)
             {
                 if (!ModelState.IsValid)
                 {
@@ -118,7 +118,7 @@ namespace ToDoWebApi.Controllers
 
             // DELETE: api/Boards/1   
             [HttpDelete("{id}")]
-             public async Task<ActionResult> DeleteObjectiveById(int id)
+             public async Task<ActionResult> DeleteBoardById(int id)
              {
                   await _brdService.DeleteBoardById(id);
                   return Ok();
