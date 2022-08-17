@@ -1,34 +1,37 @@
-import React, {ChangeEvent, useState} from "react"
+import React, {ChangeEvent, useState, useEffect} from "react"
 import { IObjective } from "../../interfaces/IObjective";
 import { useBoardStore } from "../../stores/board.store";
 import { useObjectiveStore } from "../../stores/objective.store";
+import {Modal, Button, Form, Input} from 'antd'; 
+import { ObjectiveEdit } from "./objectiveEdit";
 
 export default function Objective ({obj})  {
 
    const [state, actions] = useObjectiveStore();
 
+    const showModal = (id) => {
+      state.currentId = id;
+      state.currentTitle = obj.title;
+      state.currentDescription = obj.taskDescription;
+      state.currentCompletion = obj.completed;
+      state.currentBoardId = obj.boardId;
+      actions.makeModalVisible();
+    }; 
+
    const deleteObjective = (id : any) : any => {
       actions.deleteObjectiveById(id);
   }
 
-  const updateObjective = (id: any) : any => {
-    actions.makeModalVisible(id);
-  }
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    var value = event.target.value;
-    console.log(value); 
-
-    const objectiveToUpdate : IObjective = 
+  const checkboxChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const objToUpdate : IObjective = 
       { id: obj.id, 
-        title: obj.title, 
-        taskDescription: obj.taskDescription, 
-        completed: event.target.checked, 
+        title: obj.title,
+        taskDescription: obj.taskDescription,
+        completed: event.target.checked,
         boardId: obj.boardId
       };
-
-    actions.updateObjective(obj.id, objectiveToUpdate);
-};
+    actions.updateObjective(obj.id, objToUpdate );
+  }
 
     return(
       <div>
@@ -36,12 +39,52 @@ export default function Objective ({obj})  {
             <div className="content">
                 <span>{obj.title}</span>
                 <span>{obj.taskDescription}</span>
-               <span><input type="checkbox" checked={obj.completed} onChange = {handleChange} /></span> 
+               <span><input type="checkbox" checked={obj.completed} onChange = {checkboxChange} /></span> 
             </div>
-            <button onClick={() => {updateObjective(obj.id)}}>edit</button>
+            <button onClick={() => showModal(obj.id)}> edit</button>
             <button className="button-del" onClick={() => {deleteObjective(obj.id)}}>delete</button>
-        
         </div> 
         </div>
     ) 
 }
+//<ObjectiveEditModal obj={obj}/>
+
+/*  <Modal
+                title="Edit Board"
+                visible={isModalVisible}
+                onOk={handleOk}
+                footer={null}
+                onCancel={handleCancel}>
+
+                 <Form onFinish={handleChange}>
+                     <Form.Item
+                          name="title"
+                          label="Title"
+                          initialValue={obj.title}
+                          rules={[
+                            {
+                              required: true,
+                            },
+                          ]}>
+                          <Input />
+                      </Form.Item>
+
+                      <Form.Item
+                          name="description"
+                          label="Description"
+                          initialValue={obj.taskDescription}
+                          rules={[
+                            {
+                              required: true,
+                            },
+                          ]}>
+                          <Input />
+                      </Form.Item>
+
+                      <Form.Item >
+                        <Button type="primary" htmlType="submit">
+                          Submit
+                        </Button>
+                      </Form.Item>
+                  </Form>
+            </Modal> */

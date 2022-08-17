@@ -5,6 +5,7 @@ import { List, Button, Modal } from "antd";
 import { BoardCreate } from './boardCreate';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import ObjectiveList from '../objective/objectivesList';
+import { BoardEdit } from './boardEdit';
 
 export const BoardList: React.FC = () => {
     const [state, actions] = useBoardStore();
@@ -24,7 +25,7 @@ export const BoardList: React.FC = () => {
             renderItem={(item) => (
                 <Board brd={item}/>
             )}/>
-
+       <BoardEdit/>
        </div>
     );
 };

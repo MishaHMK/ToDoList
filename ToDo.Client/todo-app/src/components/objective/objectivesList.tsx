@@ -2,11 +2,11 @@ import React, {useEffect} from 'react';
 import Objective from './objective';
 import { useObjectiveStore } from '../../stores/objective.store';
 import { IObjective } from '../../interfaces/IObjective';
-import {ObjectiveEditModal} from './objectiveEditModal';
 import { ObjectiveCreate } from './objectiveCreate';
 import { useBoardStore } from "../../stores/board.store";
 import { useNavigate } from "react-router-dom";
 import { Button } from 'antd';
+import { ObjectiveEdit } from "./objectiveEdit";
 
 export default function  ObjectiveList () {
     const navigate = useNavigate();
@@ -33,8 +33,8 @@ export default function  ObjectiveList () {
             {obj_state.objectives.map((obj: IObjective, key: number) => (
             <Objective key = {key} obj={obj}/>
         ))}
-    </ul>
-     <ObjectiveEditModal/>
+        </ul>     
+        <ObjectiveEdit/>
     </div>
     );
 };

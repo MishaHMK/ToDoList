@@ -3,7 +3,7 @@ import { AppService } from '../services/app.service';
 import { IBoard } from '../interfaces/IBoard';
 import axios from "axios";
 
-type State = { boards: any, objs: any, IsShown: any, currentId: any, currentTitle: any};
+type State = { boards: any, objs: any, IsShown: any, currentId: any, currentTitle: any, currentTasks: any};
 type Actions = typeof actions;
 
 
@@ -12,7 +12,8 @@ const initialState: State = {
   objs: [],
   IsShown: false,
   currentId: 1,
-  currentTitle: ' '
+  currentTitle: ' ',
+  currentTasks: []
 
 };
 
@@ -72,12 +73,26 @@ const actions = {
           boards: newList
         });
       }
+    },
+
+    makeModalVisible: (): Action<State> => 
+    async ({ setState }) => 
+    {
+      setState({
+        IsShown: true,
+      });
+    },
+  
+    makeModalInvisible: (): Action<State> => async ({ setState }) => {
+      setState({
+        IsShown: false
+      });
     }
 };
 
 const Store = createStore<State, Actions>({
   initialState,
-  actions,
+  actions
 });
 
 export const useBoardStore = createHook(Store);

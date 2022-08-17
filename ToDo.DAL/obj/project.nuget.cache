@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D7uE5AvesHcuMtqxRWj2h9wJ58hiFKpkWT1CHemKRdFp4Y5psfGUxOuEIo3BEhrwnfeuLyWNHsIZqvYj/IuR7A==",
+  "dgSpecHash": "6pXrbi38Fv/7lHD6Ytpmzr9AbmjQr7YcjOAsRqiEBSZ666qYFllD2MOKdTIIhgy7thuCdaAtuFzZP48X52AdSg==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
+  "projectFilePath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Misha\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Misha\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

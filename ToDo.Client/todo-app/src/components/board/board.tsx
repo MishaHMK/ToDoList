@@ -11,39 +11,22 @@ export default function Board ({brd})  {
 
   const [state, actions] = useBoardStore();
 
-  const [isModalVisible, setIsModalVisible] = useState(false);
-
-  const showModal = () => {
-      setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
+  const showModal = (id) => {
+    state.currentId = id;
+    state.currentTitle = brd.title;
+    state.currentTasks = brd.tasks;
+    console.log(state.currentTitle);
+    actions.makeModalVisible();
   };
 
   const deleteBoard = (id : any) : any => {
     actions.deleteBoardById(id);
   }
 
- const handleChange = (values) => {
-    console.log(values);
-    const boardToUpdate : IBoard = 
-      { id: brd.id, 
-        title: values.title,
-        tasks: brd.tasks
-      };
-    actions.updateBoard(brd.id, boardToUpdate);
- }
-
   const objectivePage = (id : any) => {
     state.currentId = id;
     state.currentTitle = brd.title;
     navigate("./items/" + id, { replace: true });
-    console.log(state.currentId);
   } 
  
      return(
@@ -56,48 +39,11 @@ export default function Board ({brd})  {
                     ))} 
                   </List>
                 <button onClick={() => objectivePage(brd.id)}> tasks</button>
-                <button onClick={showModal}> edit</button>
+                <button onClick={() => showModal(brd.id)}> edit</button>
                 <button className="button-del" onClick={() => {deleteBoard(brd.id)}}>delete</button>
                 </Card>
             </List.Item>
-
-        
-
-            <Modal
-                title="Edit Board"
-                visible={isModalVisible}
-                onOk={handleOk}
-                footer={null}
-                onCancel={handleCancel}>
-                <Form onFinish={handleChange}>
-
-                <Form.Item
-                name="title"
-                label="Title"
-                rules={[
-                  {
-                    required: true,
-                  },
-                ]}>
-                <Input />
-              </Form.Item>
-
-
-              <Form.Item >
-                <Button type="primary" htmlType="submit">
-                  Submit
-                </Button>
-                </Form.Item>
-
-        </Form>
-            </Modal>
-         </div>
+         </div>         
      ) 
 
 }
-
-
-/*   {brd.tasks.map((obj: IObjective, key: number) => (
-                     <p key={key}>{obj.title}</p>
-                    ))} 
-  */

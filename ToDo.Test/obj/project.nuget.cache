@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ARxN7ejd0H02Dg6SA04/DLhawkoVcJxKoQouwGVxm9TCXJCPyP1nFFY8K771REApKtw3hrY7yvvODG2cMFO55Q==",
+  "dgSpecHash": "u+XmmW3Vvb1LoJDq6Vo3NSWgTaOtgVakB3zK+lwibFKpD+/LfsM2jNEbYj1V7iACz3s5to7dZ4MCZKGkQyzEIQ==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Курси\\ToDoProject\\ToDo.Test\\ToDo.Test.csproj",
+  "projectFilePath": "D:\\Study\\Academy\\ToDoProject\\ToDo.Test\\ToDo.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Misha\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Misha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

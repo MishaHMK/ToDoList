@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Курси\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj": {}
+    "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Курси\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj": {
+    "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Курси\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
+        "projectUniqueName": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
         "projectName": "ToDo.BLL",
-        "projectPath": "D:\\Study\\Курси\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
+        "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
         "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Курси\\ToDoProject\\ToDo.BLL\\obj\\",
+        "outputPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {
-                "projectPath": "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj"
+              "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {
+                "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj"
               }
             }
           }
@@ -68,14 +68,14 @@
         }
       }
     },
-    "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {
+    "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
+        "projectUniqueName": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
         "projectName": "ToDo.DAL",
-        "projectPath": "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
+        "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
         "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Курси\\ToDoProject\\ToDo.DAL\\obj\\",
+        "outputPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",

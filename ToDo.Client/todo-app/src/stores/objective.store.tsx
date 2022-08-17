@@ -82,23 +82,15 @@ const actions = {
       }
     },
 
-  makeModalVisible: (id: any): Action<State> => async ({ setState }) => {
-    const currentVisibility = true;
-    const obj = await axios.get("https://localhost:44342/api/objectives/" + id);
+  makeModalVisible: (): Action<State> => async ({ setState }) => {
     setState({
-      IsShown: currentVisibility,
-      currentId: obj.data.id,
-      currentTitle: obj.data.title,
-      currentDescription: obj.data.taskDescription,
-      currentCompletion: obj.data.completed,
-      currentBoardId: obj.data.boardId
+      IsShown: true,
     });
   },
 
   makeModalInvisible: (): Action<State> => async ({ setState }) => {
-    const currentVisibility = false;
     setState({
-      IsShown: currentVisibility
+      IsShown: false
     });
   }
 
