@@ -14,7 +14,7 @@ export const BoardEdit: React.FC = () =>{
         if(state.IsShown == true){
             updateModal();
         }   
-    });
+    }, [state.IsShown]);
 
     const updateModal = () => {
         form.setFieldsValue({
@@ -54,6 +54,7 @@ export const BoardEdit: React.FC = () =>{
                           label="Title"
                           rules={[
                             {
+                              max: 30,
                               required: true,
                             },
                           ]}>

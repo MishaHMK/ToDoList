@@ -32,8 +32,9 @@ export const BoardCreate: React.FC = () => {
                     {() => (
                     <Button
                         type="primary"
+                        style={{ background: "#52c41a", borderColor: "green" }}
                         htmlType="submit">
-                        Add Task
+                        Add Board
                     </Button>
                     )}
                 </Form.Item>

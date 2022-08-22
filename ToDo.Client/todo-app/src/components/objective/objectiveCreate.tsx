@@ -1,4 +1,4 @@
-import React from 'react';
+    import React from 'react';
 import { IObjective } from '../../interfaces/IObjective';
 import { useObjectiveStore } from '../../stores/objective.store';
 import { useBoardStore } from '../../stores/board.store';
@@ -45,6 +45,7 @@ export const ObjectiveCreate: React.FC = () => {
             {() => (
             <Button
                 type="primary"
+                style={{ background: "#52c41a", borderColor: "green" }}
                 htmlType="submit">
                 Add Task
             </Button>

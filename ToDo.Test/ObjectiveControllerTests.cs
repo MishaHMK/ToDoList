@@ -43,13 +43,13 @@ public class ObjectiveControllerTests
     public async Task GetObjectiveById_ReturnsNeededId()
     {
         //Arrange
-        _objectiveServiceMock.Setup(x => x.GetObjectiveByIdAsync(5))
+        _objectiveServiceMock.Setup(x => x.GetObjectiveByIdAsync(It.IsAny<int>()))
             .ReturnsAsync(new Objective { Id = 5 });
         _mapperMock.Setup(m => m.Map<ObjectiveDTO>(It.IsAny<Objective>()))
             .Returns(new ObjectiveDTO() { Id = 5 });
 
         //Act
-        ActionResult result = await _controller.GetObjective(5);
+        ActionResult result = await _controller.GetObjective(It.IsAny<int>());
         var content = (result as OkObjectResult).Value;
 
         //Assert

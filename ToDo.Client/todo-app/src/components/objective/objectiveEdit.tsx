@@ -57,6 +57,7 @@ export const ObjectiveEdit: React.FC = () =>{
                           label="Title"
                           rules={[
                             {
+                              max: 30,
                               required: true,
                             },
                           ]}>
