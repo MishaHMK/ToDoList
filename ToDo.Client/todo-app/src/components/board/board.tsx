@@ -3,7 +3,7 @@ import { IBoard} from "../../interfaces/IBoard";
 import { useBoardStore } from "../../stores/board.store";
 import {  Card, List, Modal, Form, Input, Button, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
-import { IObjective } from "../../Interfaces";
+import { IObjective } from "../../interfaces/IObjective";
 
 export default function Board ({brd})  { 
 

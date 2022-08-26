@@ -3,7 +3,7 @@ import { IBoard} from "../../interfaces/IBoard";
 import { useObjectiveStore } from "../../stores/objective.store";
 import { Modal, Form, Input, Button } from "antd";
 import { useForm } from "antd/lib/form/Form";
-import { IObjective } from "../../Interfaces";
+import { IObjective } from "../../interfaces/IObjective";
 
 
 export const ObjectiveEdit: React.FC = () =>{ 
