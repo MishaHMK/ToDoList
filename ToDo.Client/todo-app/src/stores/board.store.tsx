@@ -1,5 +1,4 @@
 import { createStore, createHook, Action } from 'react-sweet-state';
-import { AppService } from '../services/app.service';
 import { IBoard } from '../interfaces/IBoard';
 import axios from "axios";
 

@@ -24,7 +24,7 @@ export default function  ObjectiveList () {
     return (
 
     <div>
-        <h1 className='todoTitle'> {brd_state.currentTitle} Objectives</h1>
+        <h1 className='todoTitle'> {brd_state.currentTitle} Tasks</h1>
 
         <ObjectiveCreate/>
         <br></br>

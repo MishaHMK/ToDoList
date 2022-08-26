@@ -22,6 +22,3 @@ const App: FC = () => {
 }
 
 export default App;
-
-
-//<ObjectiveList/> <BoardList/>
