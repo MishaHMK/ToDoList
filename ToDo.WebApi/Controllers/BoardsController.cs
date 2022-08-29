@@ -30,7 +30,7 @@ namespace ToDoWebApi.Controllers
             {
                 var boards = await _brdService.GetAllBoardsAsync();
                 //var boardDTOs = _mapper.Map<List<BoardDTO>>(boards);
-
+                //SOME CHANGE
                 return Ok(boards);
             }
 
@@ -86,16 +86,7 @@ namespace ToDoWebApi.Controllers
                 return CreatedAtAction("PostBoard", new { id = board.Id }, board);
             }
 
-    
-
-            // PUT: api/Objectives
-            [HttpPut]
-            public async Task<ActionResult> PutObjective(Board board)
-            {
-                 await _brdService.UpdateBoard(board);
-                 return NoContent();
-            }
-
+            //REMOVED GIT ID
 
             // PUT: api/Boards/1010
             [HttpPut("{id}")]
