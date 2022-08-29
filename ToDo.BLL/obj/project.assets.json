@@ -6196,11 +6196,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
+      "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
       "projectName": "ToDo.BLL",
-      "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
+      "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
       "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\obj\\",
+      "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6217,8 +6217,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {
-              "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj"
+            "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {
+              "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj"
             }
           }
         }
@@ -6253,7 +6253,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   },

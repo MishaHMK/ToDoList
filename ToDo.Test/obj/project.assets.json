@@ -7354,11 +7354,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Academy\\ToDoProject\\ToDo.Test\\ToDo.Test.csproj",
+      "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.Test\\ToDo.Test.csproj",
       "projectName": "ToDo.Test",
-      "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.Test\\ToDo.Test.csproj",
+      "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.Test\\ToDo.Test.csproj",
       "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.Test\\obj\\",
+      "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7375,8 +7375,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Study\\Academy\\ToDoProject\\ToDo.WebApi\\ToDo.WebApi.csproj": {
-              "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.WebApi\\ToDo.WebApi.csproj"
+            "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj": {
+              "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj"
             }
           }
         }
@@ -7431,7 +7431,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   },

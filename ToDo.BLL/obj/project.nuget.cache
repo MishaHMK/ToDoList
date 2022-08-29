@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yfiAsh7EDmhYkxfM9qFav0x1mdbUbg6+bx+vSeHmsQBantTXmS44lomD0+ah2BCu7koZ67nepdynmUmgKUzPqA==",
+  "dgSpecHash": "EeXf491PevZWTNJcZBCzKgixVNq3BiXq5zHKrPwE4hRI8iNr6TVn9ua0vS9iTKwbtglwCq5JsiXn5elIflYt9A==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Academy\\ToDoProject\\ToDo.BLL\\ToDo.BLL.csproj",
+  "projectFilePath": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Misha\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Misha\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.9\\microsoft.aspnet.mvc.5.2.9.nupkg.sha512",

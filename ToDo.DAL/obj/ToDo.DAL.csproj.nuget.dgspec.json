@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {}
+    "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj": {
+    "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
+        "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
         "projectName": "ToDo.DAL",
-        "projectPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\ToDo.DAL.csproj",
+        "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
         "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Academy\\ToDoProject\\ToDo.DAL\\obj\\",
+        "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.303\\RuntimeIdentifierGraph.json"
         }
       }
     }
