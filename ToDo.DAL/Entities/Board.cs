@@ -12,5 +12,7 @@ namespace ToDo.DAL.Entities
         [MaxLength(30)]
         public string Title { get; set; }
         public List<Objective> Tasks { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }

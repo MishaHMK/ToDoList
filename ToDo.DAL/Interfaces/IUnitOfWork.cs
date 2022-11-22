@@ -16,6 +16,11 @@ namespace ToDo.DAL.Interfaces
             get;
         }
 
+        IUserRepository Users
+        {
+            get;
+        }
+
         Task Save();
     }
 }

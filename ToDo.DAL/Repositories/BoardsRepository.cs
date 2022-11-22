@@ -52,5 +52,11 @@ namespace ToDo.DAL.Repositories
             var boards = _context.Boards.Include(o => o.Tasks).ToList();
             return boards;
         }
+
+        public List<Board> GetBoardsByUserId(int userId)
+        {
+            var boards = _context.Boards.Where(o => o.UserId == userId).Include(o => o.Tasks).ToList();
+            return boards;
+        }
     }
 }

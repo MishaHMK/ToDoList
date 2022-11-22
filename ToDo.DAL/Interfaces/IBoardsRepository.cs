@@ -11,6 +11,8 @@ namespace ToDo.DAL.Interfaces
 
         List<Board> GetBoardsWithObjectives();
 
+        List<Board> GetBoardsByUserId(int userId);
+
         //List<Board> GetBoardsWithObjectives(int boardId);
     }
 }

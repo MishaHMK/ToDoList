@@ -54,5 +54,10 @@ namespace ToDo.BLL.Services
         {
             return _unitOfWork.Boards.GetBoardsWithObjectives();
         }
+
+        public ICollection<Board> GetAllUserBoards(int userId)
+        {
+            return _unitOfWork.Boards.GetBoardsByUserId(userId);
+        }
     }
 }

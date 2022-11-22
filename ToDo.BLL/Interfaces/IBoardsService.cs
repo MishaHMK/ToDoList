@@ -9,15 +9,17 @@ namespace ToDo.BLL.Interfaces
     {
         Task<ICollection<Board>> GetAllBoardsAsync();
 
-        Task<Board> GetBoardByIdAsync(int objectId);
+        Task<Board> GetBoardByIdAsync(int boardId);
 
-        Task CreateBoard(Board objective);
+        Task CreateBoard(Board board);
 
-        Task UpdateBoard(Board objective);
+        Task UpdateBoard(Board board);
 
         Task DeleteBoardById(int id);
 
         ICollection<Objective> GetAllBoardObjectives(int id);
+
+        ICollection<Board> GetAllUserBoards(int userId);
 
         ICollection<Board> GetBoardsWithObjectives();
 

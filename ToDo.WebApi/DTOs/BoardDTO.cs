@@ -9,5 +9,6 @@ namespace ToDoWebApi.DTOs
         [Required]
         [MaxLength(30)]
         public string Title { get; set; }
+        public int UserId { get; set; }
     }
 }

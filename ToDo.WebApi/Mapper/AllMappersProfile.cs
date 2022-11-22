@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using ToDo.DAL.Entities;
+using ToDo.WebApi.DTOs;
 using ToDoWebApi.DTOs;
 
 namespace ToDoWebApi.Mapper
@@ -10,6 +11,7 @@ namespace ToDoWebApi.Mapper
         {
             CreateMap<Board, BoardDTO>().ReverseMap();
             CreateMap<Objective, ObjectiveDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
         }
     }
 }

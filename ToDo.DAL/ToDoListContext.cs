@@ -10,13 +10,13 @@ namespace ToDo.DAL
 
         public DbSet<Objective> Objectives { get; set; }
         public DbSet<Board> Boards { get; set; }
-
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-M78QGAQ;Initial Catalog=ToDoListDB;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-M78QGAQ;Initial Catalog=ToDoListAuth;Integrated Security=True");
             }
         }
 
@@ -26,6 +26,9 @@ namespace ToDo.DAL
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Objective>().HasKey(obj => obj.Id);
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<User>().HasKey(u => u.Id);
             base.OnModelCreating(modelBuilder);
         }
     }

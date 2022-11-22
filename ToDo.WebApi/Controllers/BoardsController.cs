@@ -48,6 +48,15 @@ namespace ToDoWebApi.Controllers
                 else return NotFound();
             }
 
+            // GET: api/Boards/user/1
+            [HttpGet("user/{id}")]
+            public async Task<ActionResult> GetBoardsOfUser(int id)
+            {
+                var boards = _brdService.GetAllUserBoards(id);
+
+                return Ok(boards);
+            }
+
 
             // GET: api/Boards/obj/1
             [HttpGet("obj/{id}")]
@@ -60,15 +69,22 @@ namespace ToDoWebApi.Controllers
                  return Ok(objectiveDTOs);
             }
 
-          // GET: api/Boards/boards
-          [HttpGet("brd")]
-            public ActionResult GetAllBoardsWithObjectives()
+            // GET: api/Boards/boards
+            [HttpGet("brd/{id}")]
+            public ActionResult GetAllBoardsWithObjectives(int id)
             {
-                var boards = _brdService.GetBoardsWithObjectives();
+                var boards = _brdService.GetAllUserBoards(id);
 
                 return Ok(boards);
             }
 
+            //[HttpGet("brd")]
+            //public ActionResult GetAllBoardsWithObjectives()
+            //{
+            //    var boards = _brdService.GetBoardsWithObjectives();
+
+            //    return Ok(boards);
+            //}
 
 
         // POST: api/Boards
@@ -114,7 +130,7 @@ namespace ToDoWebApi.Controllers
                 await _brdService.UpdateBoard(boardToUpdate);
 
                 return NoContent();
-        }
+            }
 
             // DELETE: api/Boards/1   
             [HttpDelete("{id}")]

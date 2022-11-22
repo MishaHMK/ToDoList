@@ -35,7 +35,7 @@ const actions = {
 
     getBoardObjectives: () : Action<State> => 
     async ({ setState}) => {
-        const brds = await axios.get("https://localhost:44342/api/boards/brd");
+        const brds = await axios.get("https://localhost:44342/api/boards/brd/2");
         setState({
           boards: brds.data
         });

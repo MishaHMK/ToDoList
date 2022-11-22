@@ -16,6 +16,8 @@ namespace ToDo.DAL
 
         public IObjectivesRepository Objectives { get; private set; }
 
+        public IUserRepository Users { get; private set; }
+
         public UnitOfWork(ToDoListContext context)
         {
             _context = context;
@@ -23,6 +25,8 @@ namespace ToDo.DAL
             Boards = new BoardsRepository(context);
 
             Objectives = new ObjectivesRepository(context);
+
+            Users = new UsersRepository(context);
         }
 
         public async Task CompleteAsync()
