@@ -29,8 +29,7 @@ namespace ToDo.WebApi.Controllers
         }
 
 
-        // GET: api/Users
-        [Authorize]
+        // GET: api/User
         [HttpGet]
         public async Task<ActionResult> GetUsers()
         {
@@ -40,7 +39,18 @@ namespace ToDo.WebApi.Controllers
             return Ok(userDTOs);
         }
 
-        // GET: api/Users/1
+        // GET: api/User/email
+        [HttpPost]
+        [Route("email")]
+        public async Task<ActionResult> GetUserByEmail(EmailDTO emailDTO)
+        {
+            var user = await _userService.GetUserByEmailAsync(emailDTO.Email);
+            var userDTO = _mapper.Map<UserDTO>(user);
+
+            return Ok(userDTO);
+        }
+
+        // GET: api/User/1
         [Authorize]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetUser(int id)
@@ -55,7 +65,7 @@ namespace ToDo.WebApi.Controllers
             else return NotFound();
         }
 
-        // POST: api/Users
+        // POST: api/User
         [HttpPost]
         public async Task<ActionResult> PostUser(UserDTO userDTO)
         {
@@ -70,7 +80,7 @@ namespace ToDo.WebApi.Controllers
             return CreatedAtAction("PostUser", new { id = user.Id }, user);
         }
 
-        // DELETE: api/Users/1
+        // DELETE: api/User/1
         [Authorize]
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteUserById(int id)
@@ -79,7 +89,7 @@ namespace ToDo.WebApi.Controllers
             return Ok();
         }
 
-        // GET: api/Users/authenticate
+        // GET: api/User/authenticate
         [AllowAnonymous]
         [HttpPost]
         [Route("authenticate")]

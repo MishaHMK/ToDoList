@@ -34,7 +34,8 @@ export const BoardEdit: React.FC = () =>{
         { 
             id: state.currentId, 
             title: values.Title,
-            tasks: state.currentTasks
+            tasks: state.currentTasks,
+            userid: state.userId
         };
 
         actions.updateBoard(state.currentId, boardToUpdate);

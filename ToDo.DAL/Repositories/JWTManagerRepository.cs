@@ -21,7 +21,7 @@ namespace ToDo.DAL.Repositories
 
         public Token Authenticate(User user, ICollection<User> usersRecords)
         {
-            if (!usersRecords.Any(x => x.Name == user.Name && x.Password == user.Password))
+            if (!usersRecords.Any(x => x.Email == user.Email && x.Password == user.Password))
             {
                 return null;
             }
@@ -33,7 +33,7 @@ namespace ToDo.DAL.Repositories
             {
                 Subject = new ClaimsIdentity(new Claim[]
               {
-             new Claim(ClaimTypes.Name, user.Name)
+             new Claim(ClaimTypes.Email, user.Email)
               }),
                 Expires = DateTime.UtcNow.AddMinutes(30),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256Signature)

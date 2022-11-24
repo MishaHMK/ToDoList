@@ -8,5 +8,6 @@ namespace ToDo.DAL.Interfaces
 {
     public interface IUserRepository : IGenericRepository<User>
     {
+        User GetUserByEmail(string email);
     }
 }

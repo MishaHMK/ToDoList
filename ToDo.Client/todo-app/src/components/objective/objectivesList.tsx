@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from 'antd';
 import { ObjectiveEdit } from "./objectiveEdit";
 
-export default function  ObjectiveList () {
+export const ObjectiveList: React.FC = () => {
     const navigate = useNavigate();
     const [obj_state, obj_actions] = useObjectiveStore(); 
     const [brd_state, brd_actions] = useBoardStore ();   
@@ -18,7 +18,7 @@ export default function  ObjectiveList () {
     }, []);
 
     const mainPage = () => {
-        navigate("../", { replace: true });
+        navigate("../boards", { replace: true });
     } 
 
     return (

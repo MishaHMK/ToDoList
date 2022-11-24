@@ -1,5 +1,6 @@
 ﻿#pragma warning disable CS1998
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -69,7 +70,8 @@ namespace ToDoWebApi.Controllers
                  return Ok(objectiveDTOs);
             }
 
-            // GET: api/Boards/boards
+            // GET: api/Boards/brd/1
+            //[Authorize]
             [HttpGet("brd/{id}")]
             public ActionResult GetAllBoardsWithObjectives(int id)
             {

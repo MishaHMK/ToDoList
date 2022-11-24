@@ -9,7 +9,7 @@ export const BoardCreate: React.FC = () => {
     const [state, actions] = useBoardStore();
 
     const createBoard = async (values) => {
-        const newBoard : IBoard = {title: values.title};
+        const newBoard : IBoard = {title: values.title, userid: 1007};
         actions.createNewBoard(newBoard);
       }
 

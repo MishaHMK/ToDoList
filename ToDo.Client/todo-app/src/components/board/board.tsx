@@ -5,7 +5,7 @@ import {  Card, List, Modal, Form, Input, Button, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import { IObjective } from "../../interfaces/IObjective";
 
-export default function Board ({brd})  { 
+export default function Board ({brd}: any)  { 
 
   const { Text, Link } = Typography;
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export default function Board ({brd})  {
   const objectivePage = (id : any) => {
     state.currentId = id;
     state.currentTitle = brd.title;
-    navigate("./items/" + id, { replace: true });
+    navigate("../items/" + id, { replace: true });
   } 
  
      return(
@@ -54,17 +54,4 @@ export default function Board ({brd})  {
      ) 
 
 }
-
-/*  {brd.tasks.map((obj: IObjective, key: number) => (
-                     <p key={key}>{obj.title}</p>
-                    ))}  */
-
-
- /*   <List>
-                  {brd.tasks.map((obj: IObjective, key: number) => (
-                     <List.Item key={key}>
-                        <List.Item.Meta  title={obj.title} />
-                        <Text delete> title={obj.title}</Text>
-                      </List.Item>
-                    ))} 
-                  </List> */                   
+              

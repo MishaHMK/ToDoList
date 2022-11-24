@@ -2,7 +2,8 @@ import { createStore, createHook, Action } from 'react-sweet-state';
 import { IBoard } from '../interfaces/IBoard';
 import axios from "axios";
 
-type State = { boards: any, objs: any, IsShown: any, currentId: any, currentTitle: any, currentTasks: any};
+type State = { boards: any, objs: any, IsShown: any, currentId: any, userId: any, currentTitle: any, currentTasks: any,
+  currentUser: any};
 type Actions = typeof actions;
 
 
@@ -11,9 +12,10 @@ const initialState: State = {
   objs: [],
   IsShown: false,
   currentId: 1,
+  userId: 0,
   currentTitle: ' ',
-  currentTasks: []
-
+  currentTasks: [],
+  currentUser: []
 };
 
 const actions = {
@@ -34,8 +36,8 @@ const actions = {
     },
 
     getBoardObjectives: () : Action<State> => 
-    async ({ setState}) => {
-        const brds = await axios.get("https://localhost:44342/api/boards/brd/2");
+    async ({ getState, setState}) => {
+        const brds = await axios.get("https://localhost:44342/api/boards/brd/" + getState().userId);
         setState({
           boards: brds.data
         });
@@ -72,6 +74,22 @@ const actions = {
           boards: newList
         });
       }
+    },
+
+    setUserId: (id: any): Action<State> => 
+    async ({ setState }) => 
+    {
+      setState({
+        userId: id,
+      });
+    },
+
+    setCurrentUser: (user: any): Action<State> => 
+    async ({ setState }) => 
+    {
+      setState({
+        currentUser: user,
+      });
     },
 
     makeModalVisible: (): Action<State> => 

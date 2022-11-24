@@ -12,6 +12,8 @@ namespace ToDo.BLL.Interfaces
 
         Task<User> GetUserByIdAsync(int objectId);
 
+        Task<User> GetUserByEmailAsync(string email);
+
         Task CreateUser(User user);
 
         Task DeleteUserById(int id);

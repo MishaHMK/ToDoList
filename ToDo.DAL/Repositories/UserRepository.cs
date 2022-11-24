@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ToDo.DAL.Entities;
 using ToDo.DAL.Interfaces;
+using System.Linq;
 
 namespace ToDo.DAL.Repositories
 {
@@ -35,17 +36,10 @@ namespace ToDo.DAL.Repositories
             dbSet.Remove(user);
         }
 
-        //public List<Objective> GetObjectives(int boardId)
-        //{
-
-        //    var objectives = _context.Objectives.Where(o => o.BoardId == boardId).OrderBy(c => c.Completed).ToList();
-        //    return objectives;
-        //}
-
-        //public List<Board> GetBoardsWithObjectives()
-        //{
-        //    var boards = _context.Boards.Include(o => o.Tasks).ToList();
-        //    return boards;
-        //}
+        public User GetUserByEmail(string email)
+        {
+            User user = _context.Users.Where(o => o.Email == email).FirstOrDefault();
+            return user;
+        }
     }
 }

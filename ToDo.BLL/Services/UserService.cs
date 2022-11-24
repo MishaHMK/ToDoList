@@ -38,5 +38,10 @@ namespace ToDo.BLL.Services
         {
             return await _unitOfWork.Users.GetById(userId);
         }
+
+        public async Task<User> GetUserByEmailAsync(string email)
+        {
+            return _unitOfWork.Users.GetUserByEmail(email);
+        }
     }
 }
