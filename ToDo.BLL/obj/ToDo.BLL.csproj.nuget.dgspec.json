@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj": {}
+    "D:\\Study\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj": {
+    "D:\\Study\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
+        "projectUniqueName": "D:\\Study\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
         "projectName": "ToDo.BLL",
-        "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
+        "projectPath": "D:\\Study\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj",
         "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\obj\\",
+        "outputPath": "D:\\Study\\ToDoList\\ToDo.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {
-                "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj"
+              "D:\\Study\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {
+                "projectPath": "D:\\Study\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {
+    "D:\\Study\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
+        "projectUniqueName": "D:\\Study\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
         "projectName": "ToDo.DAL",
-        "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
+        "projectPath": "D:\\Study\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
         "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\obj\\",
+        "outputPath": "D:\\Study\\ToDoList\\ToDo.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",

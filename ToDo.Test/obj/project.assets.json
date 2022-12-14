@@ -7790,11 +7790,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.Test\\ToDo.Test.csproj",
+      "projectUniqueName": "D:\\Study\\ToDoList\\ToDo.Test\\ToDo.Test.csproj",
       "projectName": "ToDo.Test",
-      "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.Test\\ToDo.Test.csproj",
+      "projectPath": "D:\\Study\\ToDoList\\ToDo.Test\\ToDo.Test.csproj",
       "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.Test\\obj\\",
+      "outputPath": "D:\\Study\\ToDoList\\ToDo.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7811,8 +7811,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj": {
-              "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj"
+            "D:\\Study\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj": {
+              "projectPath": "D:\\Study\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj"
             }
           }
         }

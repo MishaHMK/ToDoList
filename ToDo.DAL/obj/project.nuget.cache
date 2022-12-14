@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UUJwUpQnIzvCp+622p4zdGCNhUfXLBUXwWyCjOhet1K5+ivJTMjGOLukyZjRfAJJTjiN5H32eJBMNbJKS8/E4w==",
+  "dgSpecHash": "HpNRapUM7YsdUvfEqtOPgIKv717Lfq4CW01Ieq6aoMhryqg0NfH3GKQNEAE6Z8WM7zgeN8gQOMzdUfxfLDcRGg==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Academy\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
+  "projectFilePath": "D:\\Study\\ToDoList\\ToDo.DAL\\ToDo.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Misha\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Misha\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.31\\microsoft.aspnetcore.authentication.jwtbearer.3.1.31.nupkg.sha512",

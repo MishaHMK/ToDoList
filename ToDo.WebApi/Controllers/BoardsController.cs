@@ -80,14 +80,6 @@ namespace ToDoWebApi.Controllers
                 return Ok(boards);
             }
 
-            //[HttpGet("brd")]
-            //public ActionResult GetAllBoardsWithObjectives()
-            //{
-            //    var boards = _brdService.GetBoardsWithObjectives();
-
-            //    return Ok(boards);
-            //}
-
 
         // POST: api/Boards
         [HttpPost]
@@ -106,9 +98,9 @@ namespace ToDoWebApi.Controllers
 
     
 
-            // PUT: api/Objectives
+            // PUT: api/Boards
             [HttpPut]
-            public async Task<ActionResult> PutObjective(Board board)
+            public async Task<ActionResult> PutBoard(Board board)
             {
                  await _brdService.UpdateBoard(board);
                  return NoContent();
@@ -117,7 +109,7 @@ namespace ToDoWebApi.Controllers
 
             // PUT: api/Boards/1010
             [HttpPut("{id}")]
-            public async Task<ActionResult> PutObjectiveById(int id, [FromBody] BoardDTO boardDTO)
+            public async Task<ActionResult> PutBoard(int id, [FromBody] BoardDTO boardDTO)
             {
 
                 var boardToUpdate = await _brdService.GetBoardByIdAsync(id);

@@ -37,3 +37,16 @@ D:\Study\Academy\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.csproj.CoreC
 D:\Study\Academy\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.dll
 D:\Study\Academy\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.pdb
 D:\Study\Academy\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.genruntimeconfig.cache
+D:\Study\ToDoList\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.deps.json
+D:\Study\ToDoList\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.runtimeconfig.json
+D:\Study\ToDoList\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.runtimeconfig.dev.json
+D:\Study\ToDoList\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.dll
+D:\Study\ToDoList\ToDo.DAL\bin\Debug\netcoreapp3.1\ToDo.DAL.pdb
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.csproj.AssemblyReference.cache
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.AssemblyInfoInputs.cache
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.AssemblyInfo.cs
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.csproj.CoreCompileInputs.cache
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.dll
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.pdb
+D:\Study\ToDoList\ToDo.DAL\obj\Debug\netcoreapp3.1\ToDo.DAL.genruntimeconfig.cache

@@ -5,16 +5,11 @@ import {Button, Form, Input} from 'antd';
 import { useUserStore } from '../../stores/user.store';
 import { useBoardStore } from '../../stores/board.store';
 import { useNavigate } from "react-router-dom";
-import { IUser } from '../../interfaces/IUser';
-import jwt_decode from "jwt-decode";
-import axios from "axios";
 
 export const UserLogin: React.FC = () => {
 
     const [state, actions] = useUserStore();
     const [brd_state, brd_actions] = useBoardStore();
-    const [currentEmail, setCurrentEmail] = useState<IEmail>();
-    const [currentUserId, setActiveUserId] = useState<string>("");
 
     const navigate = useNavigate();
 
@@ -26,6 +21,10 @@ export const UserLogin: React.FC = () => {
         await brd_actions.setUserId(user.id);
         await brd_actions.setCurrentUser(user);
         navigate("../boards", { replace: true });
+    } 
+
+    const register = () => {
+        navigate("../register", { replace: true });
     } 
 
     return (
@@ -52,7 +51,7 @@ export const UserLogin: React.FC = () => {
                         required: true
                     },
                     ]}>
-                    <Input placeholder="Password" />
+                    <Input.Password placeholder="Password" />
                 </Form.Item>
                 <Form.Item shouldUpdate>
                     {() => (
@@ -64,6 +63,7 @@ export const UserLogin: React.FC = () => {
                     </Button>
                     )}
                 </Form.Item>
+                <Button className='returnBtn' onClick={register} block>Register</Button >
          </Form>
         </div>
     </div>

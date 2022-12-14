@@ -17,7 +17,7 @@ const App: FC = () => {
                       <Route path="boards" element={<BoardList/>} />
                       <Route path="items/:id" element={<ObjectiveList/>} />
                       <Route path="register" element={<UserRegister/>} />
-                      <Route path="login" element={<UserLogin/>} />
+                      <Route path="" element={<UserLogin/>} />
                   </Routes>
           </BrowserRouter>
       </div>

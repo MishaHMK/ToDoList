@@ -135,7 +135,7 @@ namespace ToDo.Test
 
             //Act
             int id = 5;
-            ActionResult result = await _controller.PutObjectiveById(id, newBoardDTO);
+            ActionResult result = await _controller.PutBoard(id, newBoardDTO);
 
             //Assert
             Assert.IsNotNull(result);
@@ -153,7 +153,7 @@ namespace ToDo.Test
 
             //Act
             int id = 45;
-            ActionResult result = await _controller.PutObjectiveById(id, newBoardDTO);
+            ActionResult result = await _controller.PutBoard(id, newBoardDTO);
 
             //Assert
             Assert.IsNotNull(result);
@@ -184,7 +184,7 @@ namespace ToDo.Test
                 .Returns(new List<Board> { new Board(), new Board() });
 
             //Act
-            ActionResult result = _controller.GetAllBoardsWithObjectives();
+            ActionResult result = _controller.GetAllBoardsWithObjectives(1);
 
             //Assert
             Assert.IsNotNull(result);

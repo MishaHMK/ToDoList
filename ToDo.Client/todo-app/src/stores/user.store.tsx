@@ -2,8 +2,8 @@ import { createStore, createHook, Action } from 'react-sweet-state';
 import { IUser } from '../interfaces/IUser';
 import { ILogin } from '../interfaces/ILogin';
 import axios from "axios";
-import jwt_decode from "jwt-decode";
 import { IEmail } from '../interfaces/IEmail';
+import jwt_decode from "jwt-decode";
 
 type State = { users: any, currentEmail: any, currentUser: any};
 type Actions = typeof actions;
@@ -30,6 +30,9 @@ const actions = {
         const {data: loginUser} = await axios.post("https://localhost:44342/api/User/authenticate", userToLogin);
         const token = loginUser.tokenString;
         const decoded: any = jwt_decode(token);
+
+        localStorage.setItem("token", token);
+
         setState({
           currentEmail: decoded.email
         });  

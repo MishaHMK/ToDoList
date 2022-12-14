@@ -5,8 +5,7 @@ import {  Card, List, Modal, Form, Input, Button, Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 import { IObjective } from "../../interfaces/IObjective";
 
-export default function Board ({brd}: any)  { 
-
+export default function Board ({brd}: any)  {
   const { Text, Link } = Typography;
   const navigate = useNavigate();
 

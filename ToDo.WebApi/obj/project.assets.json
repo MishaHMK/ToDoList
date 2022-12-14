@@ -6618,11 +6618,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj",
+      "projectUniqueName": "D:\\Study\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj",
       "projectName": "ToDo.WebApi",
-      "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj",
+      "projectPath": "D:\\Study\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj",
       "packagesPath": "C:\\Users\\Misha\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\obj\\",
+      "outputPath": "D:\\Study\\ToDoList\\ToDo.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Misha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6639,8 +6639,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj": {
-              "projectPath": "D:\\Study\\Academy\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj"
+            "D:\\Study\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj": {
+              "projectPath": "D:\\Study\\ToDoList\\ToDo.BLL\\ToDo.BLL.csproj"
             }
           }
         }

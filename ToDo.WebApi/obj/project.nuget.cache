@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u3E5K4hGtXMxX+pGnpveQE3hxLTY/Dip6qFpLI+jrog5WyNEmt3DHxH8vE9nFpZkneyKzLBNZ0AwieJSj2jGDw==",
+  "dgSpecHash": "mboJVDWoYJTflGqN7dWlId8Ri8dwYOadkkg+Ev95kMqccQH9eGiODrTYGPPHmRXfn0mkeGFkchhTvVwpjbP1zA==",
   "success": true,
-  "projectFilePath": "D:\\Study\\Academy\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj",
+  "projectFilePath": "D:\\Study\\ToDoList\\ToDo.WebApi\\ToDo.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Misha\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Misha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

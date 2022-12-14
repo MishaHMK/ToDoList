@@ -29,11 +29,6 @@ namespace ToDo.DAL
             Users = new UsersRepository(context);
         }
 
-        public async Task CompleteAsync()
-        {
-            await _context.SaveChangesAsync();
-        }
-
         public async Task Save()
         {
             await _context.SaveChangesAsync();

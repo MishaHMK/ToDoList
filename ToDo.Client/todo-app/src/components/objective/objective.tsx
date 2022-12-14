@@ -1,9 +1,6 @@
 import React, {ChangeEvent, useState, useEffect} from "react"
 import { IObjective } from "../../interfaces/IObjective";
-import { useBoardStore } from "../../stores/board.store";
 import { useObjectiveStore } from "../../stores/objective.store";
-import {Modal, Button, Form, Input} from 'antd'; 
-import { ObjectiveEdit } from "./objectiveEdit";
 
 export default function Objective ({obj})  {
 
